@@ -19,10 +19,10 @@ set /p "unidade=-Digite a letra da unidade para Backup, exemplo> g: "
 for %%a in (%uni%) do ( if /i %unidade%== %%a goto inicio)
 ::continua caso a unidade esteja errada e retorna!!!
 echo.
-echo -Unidade errada, tente novamente!!!
-pause> nul
-cls
-goto retorno
+ echo -Unidade errada, tente novamente!!!
+ pause> nul
+ cls
+ goto retorno
 ::Opções de Backup
 :inicio
 cls
@@ -42,25 +42,25 @@ echo              +=------------+-----------=+
 echo.
 ::Choice + errorlevel
 choice /c "1234567" /n /m "-Digite>"
-goto %errorlevel%
+ goto %errorlevel%
 :1
 xcopy %userprofile%\Pictures\*.* %unidade% /s /e /y
-	goto inicio
+ goto inicio
 :2
 xcopy %userprofile%\Videos\*.* %unidade% /s /e /y
-	goto inicio 
+ goto inicio 
 :3
 xcopy %userprofile%\Documents\*.* %unidade% /s /e /y
-	goto inicio
+ goto inicio
 :4
 xcopy %userprofile%\Music\*.* %unidade% /s /e /y
-	goto inicio
+ goto inicio
 :5
 xcopy %userprofile%\Downloads\*.* %unidade% /s /e /y
-	goto inicio
+ goto inicio
 :6
  cls
-   goto retorno
+ goto retorno
 :7
  exit
 pause >nul
