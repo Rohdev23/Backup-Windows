@@ -40,7 +40,7 @@ echo              +--------------------------+
 echo              +   7: Sair                + 
 echo              +=------------+-----------=+
 echo.
-::Choice + error level
+::Choice + errorlevel
 choice /c "1234567" /n /m "-Digite>"
 goto %errorlevel%
 :1
