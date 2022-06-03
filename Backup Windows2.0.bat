@@ -4,7 +4,7 @@
 mode con: lines=30 cols=65
 color 1f
 title Backup Windows 2.0
-::Adcione sua unidade de backup caso não esteja aqui
+::Adicione sua unidade de backup caso não esteja aqui
 set uni=a: b: c: d: e: f: g: h: i: j:
 ::Inicio do Script
 :retorno
@@ -23,7 +23,7 @@ echo -Unidade errada, tente novamente!!!
 pause> nul
 cls
 goto retorno
-::Escolha a opção
+::Opções de Backup
 :inicio
 cls
 echo.
