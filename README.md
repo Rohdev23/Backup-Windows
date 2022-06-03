@@ -1,2 +1,2 @@
 # Backup-Windows2.0
- Script de Backup de arquivos para Windows
+ Script Batch para Backup de arquivos -> Windows 
