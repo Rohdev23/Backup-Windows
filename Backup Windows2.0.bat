@@ -1,10 +1,12 @@
 @echo off
 ::Criado por; Rodrigo Albuquerque
 ::Backup de Arquivos Windows 2.0
-mode con: lines=30 cols=60
+mode con: lines=30 cols=65
 color 1f
 title Backup Windows 2.0
-set uni=f: d: e: g: h: 
+::Adcione sua unidade de backup caso não esteja aqui
+set uni=a: b: c: d: e: f: g: h: i: j:
+::Inicio do Script
 :retorno
 echo.
 echo   		  +-----------------+
@@ -12,7 +14,7 @@ echo   		  + Backup Arquivos +
 echo   		  +-----------------+
 echo.
 echo.
-set /p "unidade=-Digite a letra da unidade, exemplos> g: / d: "
+set /p "unidade=-Digite a letra da unidade para Backup, exemplo> g: "
 ::Laço For para comparação... 
 for %%a in (%uni%) do ( if /i %unidade%== %%a goto inicio)
 ::continua caso a unidade esteja errada e retorna!!!
@@ -38,6 +40,7 @@ echo              +--------------------------+
 echo              +   7: Sair                + 
 echo              +=------------+-----------=+
 echo.
+::Choice + error level
 choice /c "1234567" /n /m "-Digite>"
 goto %errorlevel%
 :1
