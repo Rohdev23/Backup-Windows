@@ -62,5 +62,5 @@ xcopy %userprofile%\Downloads\*.* %unidade% /s /e /y
  cls
    goto retorno
 :7
-	exit
+ exit
 pause >nul
