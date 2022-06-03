@@ -17,10 +17,10 @@ set /p "unidade=-Digite a letra da unidade, exemplos> g: / d: "
 for %%a in (%uni%) do ( if /i %unidade%== %%a goto inicio)
 ::continua caso a unidade esteja errada e retorna!!!
 echo.
- echo -Unidade errada, tente novamente!!!
+echo -Unidade errada, tente novamente!!!
    pause> nul
-       cls
-         goto retorno
+   cls
+   goto retorno
 :inicio
 cls
 echo.
