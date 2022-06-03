@@ -18,7 +18,7 @@ set /p "unidade=-Digite a letra da unidade para Backup, exemplo> g: "
 ::Laço For para comparação... 
 for %%a in (%uni%) do ( if /i %unidade%== %%a goto inicio)
 ::continua caso a unidade esteja errada e retorna!!!
-echo.
+  echo.
   echo -Unidade errada, tente novamente!!!
   pause> nul
   cls
