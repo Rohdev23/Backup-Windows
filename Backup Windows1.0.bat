@@ -3,7 +3,7 @@
 ::Backup de Arquivos Windows 2.0
 mode con: lines=30 cols=65
 color 1f
-title Backup Windows 2.0
+title Backup Windows 1.0
 ::Adicione sua unidade de backup caso não esteja aqui
 set uni=a: b: c: d: e: f: g: h: i: j:
 ::Inicio do Script
@@ -28,39 +28,43 @@ for %%a in (%uni%) do ( if /i %unidade%== %%a goto inicio)
 cls
 echo.
 echo              +=------------+-----------=+
-echo              +   1: Backup + Imagens    +
-echo              +   2: Backup + Videos     +
-echo              +   3: Backup + Documentos +
-echo              +   4: Backup + Musicas    +
-echo              +   5: Backup + Downloads  +
+echo              +   1: Backup + Desktop    +
+echo              +   2: Backup + Imagens    +
+echo              +   3: Backup + Videos     +
+echo              +   4: Backup + Documentos +
+echo              +   5: Backup + Musicas    +
+echo              +   6: Backup + Downloads  +
 echo              +--------------------------+
 echo              +-------------+------------+
-echo              +   6: Trocar unidade      +
+echo              +   7: Trocar unidade      +
 echo              +--------------------------+
-echo              +   7: Sair                + 
+echo              +   8: Sair                + 
 echo              +=------------+-----------=+
 echo.
 ::Choice + errorlevel
-choice /c "1234567" /n /m "-Digite>"
+choice /c "12345678" /n /m "-Digite>"
   goto %errorlevel%
-:1
-xcopy %userprofile%\Pictures\*.* %unidade% /s /e /y
+:1 
+xcopy %userprofile%\Desktop\*.* /exclude:removelnk.txt %unidade% /s /e /y    
   goto inicio
 :2
+xcopy %userprofile%\Pictures\*.* %unidade% /s /e /y
+  goto inicio
+:3
 xcopy %userprofile%\Videos\*.* %unidade% /s /e /y
   goto inicio 
-:3
+:4
 xcopy %userprofile%\Documents\*.* %unidade% /s /e /y
   goto inicio
-:4
+:5
 xcopy %userprofile%\Music\*.* %unidade% /s /e /y
   goto inicio
-:5
+:6
 xcopy %userprofile%\Downloads\*.* %unidade% /s /e /y
   goto inicio
-:6
+:7
   cls
   goto retorno
-:7
+:8
   exit
 pause >nul
