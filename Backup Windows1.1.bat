@@ -1,6 +1,6 @@
 @echo off
 ::Criado por; Rodrigo Albuquerque
-::Backup de Arquivos Windows 2.0
+::Backup de Arquivos Windows 1.1
 mode con: lines=30 cols=65
 color 1f
 title Backup Windows 1.1
