@@ -1,20 +1,16 @@
 @echo off
 ::Criado por; Rodrigo Albuquerque
-::Backup de Arquivos Windows 1.1
+::Backup de Arquivos Windows 1.2
 mode con: lines=30 cols=65
 color 1f
-title Backup Windows 1.1
+title Backup Windows 1.2
 ::Adicione sua unidade de backup caso não esteja aqui
 set uni=a: b: c: d: e: f: g: h: i: j:
 ::Inicio do Script
 :retorno
+call artASCII\art.bat
 echo.
-echo   		  +-----------------+
-echo   		  + Backup Arquivos +
-echo   		  +-----------------+
-echo.
-echo.
-set /p "unidade=-Digite a letra da unidade para Backup, exemplo> g: "
+set /p "unidade=-Digite a unidade para Backup, exemplo> g: "
 ::Laço For para comparação... 
 for %%a in (%uni%) do ( if /i %unidade%== %%a goto inicio)
 ::Caso a unidade esteja errada retorna!!!
@@ -27,19 +23,7 @@ for %%a in (%uni%) do ( if /i %unidade%== %%a goto inicio)
 :inicio
 cls
 echo.
-echo              +=------------+-----------=+
-echo              +   1: Backup + Desktop    +
-echo              +   2: Backup + Imagens    +
-echo              +   3: Backup + Videos     +
-echo              +   4: Backup + Documentos +
-echo              +   5: Backup + Musicas    +
-echo              +   6: Backup + Downloads  +
-echo              +--------------------------+
-echo              +-------------+------------+
-echo              +   7: Trocar unidade      +
-echo              +--------------------------+
-echo              +   8: Sair                + 
-echo              +=------------+-----------=+
+call artASCII\art2.bat 
 echo.
 ::Choice + errorlevel
 choice /c "12345678" /n /m "-Digite>"
