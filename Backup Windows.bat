@@ -1,9 +1,9 @@
 @echo off
 ::Criado por; Rodrigo Albuquerque
-::Backup de Arquivos Windows 1.2
+::Backup de Arquivos Windows v1.2
 mode con: lines=30 cols=65
 color 1f
-title Backup Windows 1.2
+title Backup Windows v1.2
 ::Adicione sua unidade de backup caso não esteja aqui
 set uni=a: b: c: d: e: f: g: h: i: j:
 ::Inicio do Script
